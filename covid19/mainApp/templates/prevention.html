@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CovidTracker - Preventive Measures</title>
+    <link rel="icon" href="/static/images/WHITEDRONE.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="/static/css/nav/nav.css">
+    <link rel="stylesheet" href="/static/css/footer/footer.css">
+    <link rel="stylesheet" href="/static/css/prevention/prevention.css">
+    <link rel="stylesheet" href="/static/css/main/main.css">
+    <!-- CSS ends here -->
+</head>
+
+<body>
+    <!-- Navbar starts here -->
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="nav">
+            <a href="/">
+                <img src="/static/images/WHITEDRONE.png" alt="" id="logo1">
+            </a>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="/statistics/">Statistics</a></li>
+                <li class="nav-item"><a href="/symptoms/">Symptoms</a></li>
+                <li class="nav-item active-link"><a href="/prevention/">Preventive Measures</a></li>
+                <li class="nav-item"><a href="/maps-stats/">Map Stats</a></li>
+                <li class="nav-item"><a href="/prediction/">Prediction</a></li>
+                <li class="nav-item"><a href="/faq/">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <!-- Preventive Measures starts here -->
+
+    <!-- Preventive Measures ends here -->
+
+    <div class="container mt-5">
+        <h3>Prevention is better than cure.</h3>
+        <div class="prevention-cont">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="/static/images/handwash.png" alt="" id="m1-img">
+                    <p>1. Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub. </p>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="/static/images/distance.png" alt="" id="m1-img">
+                    <p>2. Maintain at least 1 metre distance between you and people coughing or sneezing. </p>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="/static/images/facetouch.png" alt="" id="m1-img">
+                    <p>3. Avoid touching your face. </p>
+                </div>
+            </div>
+        </div>
+        <div class="prevention-cont">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="/static/images/cough.png" alt="" id="m1-img">
+                    <p>4. Cover your mouth and nose when coughing or sneezing. </p>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="/static/images/stay-home.png" alt="" id="m1-img">
+                    <p>5. Stay home if you feel unwell.</p>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="/static/images/smoke.png" alt="" id="m1-img">
+                    <p>6. Refrain from smoking and other activities that weaken the lungs. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer Starts here -->
+    <footer class="footer mt-5">
+        <div class="info-foot">
+            <div class="name">
+                <h3>CovidTracker</h3>
+            </div>
+            <div class="line-foot"></div>
+            <div class="links-foot">
+                <a href="/symptoms/">Symptoms</a>
+                <a href="/prevention/">Preventive Measures</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/about-us/">Know our team</a>
+            </div>
+        </div>
+        <div class="name-foot">
+            <p>covidtracker.com 2020 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+    <!-- Our team button starts-->
+    <div class="our-team-btn">
+        <a href="/about-us/" title="Know our team" class="team-btn"><i class="fas fa-users"></i></a>
+    </div>
+    <!-- Our team button ends -->
+
+    <script>
+        (function () {
+            var js,
+                fs,
+                d = document,
+                id = "tars-widget-script",
+                b = "https://tars-file-upload.s3.amazonaws.com/bulb/";
+            if (!d.getElementById(id)) {
+                js = d.createElement("script");
+                js.id = id;
+                js.type = "text/javascript";
+                js.src = b + "js/widget.js";
+                fs = d.getElementsByTagName("script")[0];
+                fs.parentNode.insertBefore(js, fs);
+            }
+        })();
+        window.tarsSettings = {
+            convid: "NywAZT",
+        };
+    </script>
+
+    <script src="/static/js/nav.js"></script>
+</body>
+
+</html>

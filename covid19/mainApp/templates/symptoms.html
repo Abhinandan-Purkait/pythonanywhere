@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="/static/images/WHITEDRONE.png">
+  <title>CovidTracker - Symptoms</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="/static/css/nav/nav.css" />
+  <link rel="stylesheet" href="/static/css/footer/footer.css" />
+  <link rel="stylesheet" href="/static/css/symptoms/symptoms.css" />
+  <link rel="stylesheet" href="/static/css/main/main.css">
+  <!-- CSS ends here -->
+</head>
+
+<body>
+  <!-- Navbar starts here -->
+  <nav>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="nav">
+      <a href="/">
+        <img src="/static/images/WHITEDRONE.png" alt="" id="logo1">
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="/statistics/">Statistics</a>
+        </li>
+        <li class="nav-item active-link"><a href="/symptoms/">Symptoms</a></li>
+        <li class="nav-item">
+          <a href="/prevention/">Preventive Measures</a>
+        </li>
+        <li class="nav-item">
+          <a href="/maps-stats/">Map Stats</a>
+        </li>
+        <li class="nav-item">
+          <a href="/prediction/">Prediction</a>
+        </li>
+        <li class="nav-item"><a href="/faq/">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar ends here -->
+
+  <!-- Symptoms starts here -->
+  <div class="symptoms-cont">
+    <p>
+      The COVID-19 virus affects different people in different ways. COVID-19
+      is a respiratory disease and most infected people will develop mild to
+      moderate symptoms and recover without requiring special treatment.
+      People who have underlying medical conditions and those over 60 years
+      old have a higher risk of developing severe disease and death.
+    </p>
+
+    <div class="container sym-cont">
+      <div>
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/static/images/sick.png" alt="" id="s1-img" />
+            <p><b>Fever</b></p>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/static/images/sore-throat.png" alt="" id="s1-img" />
+            <p><b>Sore Throat</b></p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/static/images/breath.png" alt="" id="s1-img" />
+            <p><b>Shortness of breath</b></p>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/static/images/tired.png" alt="" id="s1-img" />
+            <p><b>Tiredness</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      People with mild symptoms who are otherwise healthy should self-isolate
+      and contact their medical provider or a COVID-19 information line for
+      advice on testing and referral. <br />
+
+      People with fever, cough or difficulty breathing should call their
+      doctor and seek medical attention.
+    </p>
+  </div>
+  <!-- Symptoms ends here -->
+
+  <!-- Symptoms graph starts here -->
+  
+  <div class="container mt-5">
+    <p class="text-center">
+      <b>Below figure shows the various symptoms and their chances for causing
+        COVID-19.</b>
+    </p>
+    <div class="card">
+      <div class="card-body">
+        <div>
+        
+        
+            <div id="d179db58-ee04-43fa-8fb9-f1a47287368c" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("d179db58-ee04-43fa-8fb9-f1a47287368c")) {
+                    Plotly.newPlot(
+                        'd179db58-ee04-43fa-8fb9-f1a47287368c',
+                        [{"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Fever", "marker": {"color": "#F8766D"}, "name": "Fever", "offsetgroup": "Fever", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Fever"], "xaxis": "x", "y": [87.9], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Dry cough", "marker": {"color": "#A3A500"}, "name": "Dry cough", "offsetgroup": "Dry cough", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Dry cough"], "xaxis": "x", "y": [67.7], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Fatigue", "marker": {"color": "#00BF7D"}, "name": "Fatigue", "offsetgroup": "Fatigue", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Fatigue"], "xaxis": "x", "y": [38.1], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Sputum production", "marker": {"color": "#00B0F6"}, "name": "Sputum production", "offsetgroup": "Sputum production", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Sputum production"], "xaxis": "x", "y": [33.4], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Shortness of breath", "marker": {"color": "#E76BF3"}, "name": "Shortness of breath", "offsetgroup": "Shortness of breath", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Shortness of breath"], "xaxis": "x", "y": [18.6], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Muscle pain", "marker": {"color": "#F8766D"}, "name": "Muscle pain", "offsetgroup": "Muscle pain", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Muscle pain"], "xaxis": "x", "y": [14.8], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Sore throat", "marker": {"color": "#A3A500"}, "name": "Sore throat", "offsetgroup": "Sore throat", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Sore throat"], "xaxis": "x", "y": [13.9], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Headache", "marker": {"color": "#00BF7D"}, "name": "Headache", "offsetgroup": "Headache", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Headache"], "xaxis": "x", "y": [13.6], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Chills", "marker": {"color": "#00B0F6"}, "name": "Chills", "offsetgroup": "Chills", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Chills"], "xaxis": "x", "y": [11.4], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Nausea or vomiting", "marker": {"color": "#E76BF3"}, "name": "Nausea or vomiting", "offsetgroup": "Nausea or vomiting", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Nausea or vomiting"], "xaxis": "x", "y": [5.0], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Nasal congestion", "marker": {"color": "#F8766D"}, "name": "Nasal congestion", "offsetgroup": "Nasal congestion", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Nasal congestion"], "xaxis": "x", "y": [4.8], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Diarrhoea", "marker": {"color": "#A3A500"}, "name": "Diarrhoea", "offsetgroup": "Diarrhoea", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Diarrhoea"], "xaxis": "x", "y": [3.7], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Haemoptysis", "marker": {"color": "#00BF7D"}, "name": "Haemoptysis", "offsetgroup": "Haemoptysis", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Haemoptysis"], "xaxis": "x", "y": [0.9], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "symptom=%{x}<br>percentage=%{y}<extra></extra>", "legendgroup": "Conjunctival congestion", "marker": {"color": "#00B0F6"}, "name": "Conjunctival congestion", "offsetgroup": "Conjunctival congestion", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": ["Conjunctival congestion"], "xaxis": "x", "y": [0.8], "yaxis": "y"}],
+                        {"barmode": "relative", "legend": {"title": {"text": "symptom"}, "tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "rgb(51,51,51)"}, "error_y": {"color": "rgb(51,51,51)"}, "marker": {"line": {"color": "rgb(237,237,237)", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "rgb(237,237,237)", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(51,51,51)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(51,51,51)"}, "baxis": {"endlinecolor": "rgb(51,51,51)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(51,51,51)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "colorscale": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "colorscale": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "colorscale": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "colorscale": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "colorscale": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}, "colorscale": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(237,237,237)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(217,217,217)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(237,237,237)", "ticklen": 6, "ticks": "inside"}}, "colorscale": {"sequential": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]], "sequentialminus": [[0, "rgb(20,44,66)"], [1, "rgb(90,179,244)"]]}, "colorway": ["#F8766D", "#A3A500", "#00BF7D", "#00B0F6", "#E76BF3"], "font": {"color": "rgb(51,51,51)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "rgb(237,237,237)", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "paper_bgcolor": "white", "plot_bgcolor": "rgb(237,237,237)", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside"}, "bgcolor": "rgb(237,237,237)", "radialaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside"}}, "scene": {"xaxis": {"backgroundcolor": "rgb(237,237,237)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "rgb(237,237,237)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "rgb(237,237,237)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside", "zerolinecolor": "white"}}, "shapedefaults": {"fillcolor": "black", "line": {"width": 0}, "opacity": 0.3}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside"}, "baxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside"}, "bgcolor": "rgb(237,237,237)", "caxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside"}}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside", "title": {"standoff": 15}, "zerolinecolor": "white"}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "showgrid": true, "tickcolor": "rgb(51,51,51)", "ticks": "outside", "title": {"standoff": 15}, "zerolinecolor": "white"}}}, "title": {"text": "Symptom of  Coronavirus"}, "xaxis": {"anchor": "y", "categoryarray": ["Fever", "Dry cough", "Fatigue", "Sputum production", "Shortness of breath", "Muscle pain", "Sore throat", "Headache", "Chills", "Nausea or vomiting", "Nasal congestion", "Diarrhoea", "Haemoptysis", "Conjunctival congestion"], "categoryorder": "array", "domain": [0.0, 1.0], "title": {"text": "symptom"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "percentage"}, "type": "log"}},
+                        {"displaylogo": false, "responsive": true}
+                    )
+                };
+                
+            </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Symptoms graph ends here-->
+
+  <!-- footer Starts here -->
+  <footer class="footer mt-5">
+    <div class="info-foot">
+      <div class="name">
+        <h3>CovidTracker</h3>
+      </div>
+      <div class="line-foot"></div>
+      <div class="links-foot">
+        <a href="/symptoms/">Symptoms</a>
+        <a href="/prevention/">Preventive Measures</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about-us/">Know our team</a>
+      </div>
+    </div>
+    <div class="name-foot">
+      <p>covidtracker.com 2020 All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer ends here -->
+
+  <!-- Our team button starts-->
+  <div class="our-team-btn">
+    <a href="/about-us/" title="Know our team" class="team-btn"><i class="fas fa-users"></i></a>
+  </div>
+  <!-- Our team button ends -->
+
+  <script>
+    (function () {
+      var js,
+        fs,
+        d = document,
+        id = "tars-widget-script",
+        b = "https://tars-file-upload.s3.amazonaws.com/bulb/";
+      if (!d.getElementById(id)) {
+        js = d.createElement("script");
+        js.id = id;
+        js.type = "text/javascript";
+        js.src = b + "js/widget.js";
+        fs = d.getElementsByTagName("script")[0];
+        fs.parentNode.insertBefore(js, fs);
+      }
+    })();
+    window.tarsSettings = {
+      convid: "NywAZT",
+    };
+  </script>
+
+  <script src="/static/js/nav.js"></script>
+</body>
+
+</html>
