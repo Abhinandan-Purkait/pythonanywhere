@@ -3,15 +3,19 @@ import cv2
 import warnings
 from .models import Images
 import numpy as np
-import tensorflow_core.keras as tk
+import keras
+import cv2
+import keras
+import warnings
+from .models import Images
+import tensorflow
+import tensorflow_core
 # MKIT STARTS
 
 
 def load_models():
-    model1 = tk.models.load_model(
-        "models/first_level_hierarchy.h5")
-    model2 = tk.models.load_model(
-        "models/second_level_hierarchy.h5")
+    model1 = keras.models.load_model("models/first_level_hierarchy.h5")
+    model2 = keras.models.load_model("models/second_level_hierarchy.h5")
     return model1, model2
 
 
@@ -29,7 +33,6 @@ def test_pneumonia(image, model1, model2):
     elif indx == 0:
         result['Pneumonia'] = [logs[3], base[0][indx]*100]
     return(result)
-# MKIT ENDS
 
 
 def index(request):
@@ -80,7 +83,7 @@ def vitualMedicalKit(request):
             imgs.append(str(x))
 
         for x in imgs:
-            imageFile = cv2.imread("images/"+x)
+            imageFile = cv2.imread("media/images/"+x)
             out = test_pneumonia(imageFile, model1, model2)
             res = out['Pneumonia']
             typelis.append(res[0])
@@ -92,3 +95,7 @@ def vitualMedicalKit(request):
         return render(request, 'mkit.html', {'lis': mainlist, "Res": 'result'})
     else:
         return render(request, 'mkit.html')
+
+
+def indiaAnalysis(request):
+    return render(request, 'indiaanalysis.html')

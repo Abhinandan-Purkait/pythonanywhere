@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CovidTracker - FAQ</title>
+    <title>CovidTracker - Virtual Medical Kit</title>
     <link rel="icon" href="{% static '/images/WHITEDRONE.png' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
@@ -23,82 +23,109 @@
 
 <body>
     <!-- Navbar starts here -->
-    <div class="post-loader">
-        <nav id="top">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top navbar-custom">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">
+            <img src="/static/images/coronavirus(1).png" alt="" id="logo1" class="rotate">
+            <h4>CovidTracker<div class="small">Teslacoil</div>
+            </h4>
+        </a>
 
-            <div class="nav">
-                <a href="{% url 'index' %}">
-                    <!-- <h1><i class="fas fa-user-md"></i> CovidTracker</h1> -->
-                    <img src="{% static '/images/WHITEDRONE.png' %}" alt="" id="logo1">
-                </a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <ul class="nav-links" id="myDiv">
-                    <li class="nav-item"><a href="{% url 'statistics' %}">Statistics</a></li>
-                    <li class="nav-item"><a href="{% url 'symptoms' %}">Symptoms</a></li>
-                    <li class="nav-item"><a href="{% url 'prevention' %}">Preventive Measures</a></li>
-                    <li class="nav-item"><a href="{% url 'map-stats' %}">Map Stats</a></li>
-                    <li class="nav-item"><a href="{% url 'prediction' %}">Prediction</a></li>
-                    <li class="nav-item active-link"><a href="{% url 'faq' %}">FAQ</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Navbar ends here -->
-
-        <div class="jumbotron">
-            <h2 class="text-center">Check Whether you have COVID or not !</h2>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/statistics/">Statistics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/symptoms/">Symptoms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/prevention/">Prevention</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/prediction/">Prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/maps-stats/">Map Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mkit'%}">Virtual Medical Kit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/indiaAnalysis/">Indian Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/faq/">FAQ</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="container">
-            <center>
-                <form method="POST" action="{% url 'mkit' %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <center>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image" multiple>
-                        </center>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Upload</button>
-                </form>
-                <br><br>
-                {% if Res %}
-                <div class="jumbotron">
-                    <h2 class="text-center" style="color: green;">Results</h2><br>
-                    <table class="table table-sm table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">File</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Probaility</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for x,y,z in lis %}
-                            <tr>
-                                <th scope="row">{{ forloop.counter }}</th>
-                                <td>{{x}}</td>
-                                <td>{{y}}</td>
-                                <td>{{z}}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+    <!-- Navbar ends here -->
+
+    <div class="jumbotron text-center">
+        <h2><img src="{% static '/images/hospital.png' %}" alt="" style="width: 60px; height: 60px;"> Welcome to our
+            section of Virtual Medical Kit.</h2>
+        <p class="lead">Check your probabilty of having COVID-19 by just uploading an image.</p>
+        <p>You must upload X-Ray image of your chest and can see the result instantly.</p>
+    </div>
+
+    <div class="container">
+        <center>
+            <form method="POST" action="{% url 'mkit' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image" multiple>
+                    <button type="submit" class="custom-btn"><i class="fas fa-upload"></i> Upload the
+                        image.</button>
                 </div>
-                {% endif %}
-            </center>
-        </div>
+            </form>
+            <br><br>
+            {% if Res %}
+            <div class="jumbotron">
+                <h2 class="text-center" style="color: green;"><img src="{% static '/images/result.png' %}" alt=""
+                        style="width: 60px; height: 60px;">Check your result(s)</h2><br>
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">File</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Probaility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x,y,z in lis %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{x}}</td>
+                            <td>{{y}}</td>
+                            <td>{{z}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </center>
+    </div>
 
     </div>
+
+
     <!-- footer Starts here -->
     <footer class="footer mt-5">
         <div class="info-foot">
             <div class="name">
-                <h3>CovidTracker</h3>
+                <img src="{% static '/images/coronavirus(1).png' %}" alt="" id="logo1" class="rotate">
+                <h3>&nbsp;CovidTracker<div class="small">Teslacoil</div>
+                </h3>
             </div>
             <div class="line-foot"></div>
             <div class="links-foot">

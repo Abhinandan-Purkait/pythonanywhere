@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    {% load static %}
+    
     <meta charset="utf-8">
     <title>CovidTracker - Know Our Team</title>
-    <link rel="icon" href="{% static '/images/WHITEDRONE.png' %}">
+    <link rel="icon" href="/static/images/WHITEDRONE.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
@@ -13,141 +14,166 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- All CSS files -->
-    <link rel="stylesheet" href="{% static 'css/nav/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'css/about/about.css' %}">
+    <link rel="stylesheet" href="/static/css/nav/nav.css">
+    <link rel="stylesheet" href="/static/css/footer/footer.css">
+    <link rel="stylesheet" href="/static/css/about/about.css">
     <!-- CSS ends here -->
 </head>
 
 <body>
     <!-- Navbar starts here -->
-    <div class="post-loader hide">
-        <nav id="top">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+    <head>
+    
+</head>
 
-            <div class="nav navbar-fixed">
-                <a href="{% url 'index' %}">
-                    <img src="{% static '/images/WHITEDRONE.png' %}" alt="" id="logo1">
-                </a>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top navbar-custom">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">
+        <img src="/static/images/coronavirus(1).png" alt="" id="logo1" class="rotate">
+        <h4>CovidTracker<div class="small">Teslacoil</div> </h4>
+    </a>
 
-                <ul class="nav-links" id="myDiv">
-                    <li class="nav-item"><a href="{% url 'statistics' %}">Statistics</a></li>
-                    <li class="nav-item"><a href="{% url 'symptoms' %}">Symptoms</a></li>
-                    <li class="nav-item"><a href="{% url 'prevention' %}">Preventive Measures</a></li>
-                    <li class="nav-item"><a href="{% url 'map-stats' %}">Map Stats</a></li>
-                    <li class="nav-item"><a href="{% url 'prediction' %}">Prediction</a></li>
-                    <li class="nav-item"><a href="{% url 'faq' %}">FAQ</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Navbar ends here -->
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="team-container container">
-            <h3 class="text-center"><i class="fas fa-users"></i> Know our team</h3>
-            <div class="line-team"></div>
-            <div class="col-md-8 col-sm-8 team-member">
-                <div class="member-up">
-                    <div class="card text-center">
-                        <img src="{% static '/images/shayan1.jpg' %}" alt="" id="profile">
-                        <p class="name1">Shayan Chatterjee</p>
-                        <p class="small">iamshayan56@gmail.com</p>
-                        <div class="social-icons">
-                            <a href="https://github.com/Cshayan" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                            <a href="https://www.linkedin.com/in/shayan-chatterjee-a41771167" target="_blank"><i
-                                    class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                    </div>
-                    <div class="card text-center">
-                        <img src="{% static '/images/abhinandan.jpg' %}" alt="" id="profile1">
-                        <p class="name1">Abhinandan Purkait</p>
-                        <p class="small">purkaitabhinandan@gmail.com</p>
-                        <div class="social-icons">
-                            <a href="https://github.com/abhinandan-purkait/" target="_blank"><i
-                                    class="fab fa-github fa-2x"></i></a>
-                            <a href="https://in.linkedin.com/in/abhinandan-purkait-486413170"><i
-                                    class="fab fa-linkedin fa-2x" target="_blank"></i></a>
-                        </div>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/statistics/">Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/symptoms/">Symptoms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/prevention/">Prevention</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/prediction/">Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/maps-stats/">Map Stats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mkit'%}">Virtual Medical Kit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/indiaAnalysis/">Indian Analysis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/faq/">FAQ</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <!-- Navbar ends here -->
+
+    <div class="team-container container">
+        <h3 class="text-center"><i class="fas fa-users"></i> Know our team</h3>
+        <div class="line-team"></div>
+        <div class="col-md-8 col-sm-8 team-member">
+            <div class="member-up">
+                <div class="card text-center">
+                    <img src="/static/images/shayan1.jpg" alt="" id="profile">
+                    <p class="name1">Shayan Chatterjee</p>
+                    <p class="small">iamshayan56@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Cshayan" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/shayan-chatterjee-a41771167" target="_blank"><i
+                                class="fab fa-linkedin fa-2x"></i></a>
                     </div>
                 </div>
-                <div class="member-down">
-                    <div class="card text-center">
-                        <img src="{% static '/images/sayantan.jpg' %}" alt="" id="profile">
-                        <p class="name1">Sayantan Ghosh</p>
-                        <p class="small">gsayantan1999@gmail.com</p>
-                        <div class="social-icons">
-                            <a href="https://github.com/Sghosh1999" target="_blank"><i
-                                    class="fab fa-github fa-2x"></i></a>
-                            <a href="https://www.linkedin.com/mwlite/in/sayantan-ghosh1999" target="_blank"><i
-                                    class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
+                <div class="card text-center">
+                    <img src="/static/images/abhinandan.jpg" alt="" id="profile1">
+                    <p class="name1">Abhinandan Purkait</p>
+                    <p class="small">purkaitabhinandan@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/abhinandan-purkait/" target="_blank"><i
+                                class="fab fa-github fa-2x"></i></a>
+                        <a href="https://in.linkedin.com/in/abhinandan-purkait-486413170"><i
+                                class="fab fa-linkedin fa-2x" target="_blank"></i></a>
                     </div>
-                    <div class="card text-center">
-                        <img src="{% static '/images/soujanna.jpg' %}" alt="" id="profile">
-                        <p class="name1">Soujanna Dutta</p>
-                        <p class="small">soujanna2015newera@gmail.com</p>
-                        <div class="social-icons">
-                            <a href="https://github.com/soun059" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
+                </div>
+            </div>
+            <div class="member-down">
+                <div class="card text-center">
+                    <img src="/static/images/sayantan.jpg" alt="" id="profile">
+                    <p class="name1">Sayantan Ghosh</p>
+                    <p class="small">gsayantan1999@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Sghosh1999" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/mwlite/in/sayantan-ghosh1999" target="_blank"><i
+                                class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="/static/images/rohit.jpeg" alt="" id="profile">
+                    <p class="name1">Rohit Halder</p>
+                    <p class="small">rhaldar9@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/tintybot" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/rohit-halder/" target="_blank"><i
+                                class="fab fa-linkedin fa-2x"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- footer Starts here -->
-        <footer class="footer mt-5">
-            <div class="info-foot">
-                <div class="name">
-                    <h3>CovidTracker</h3>
-                </div>
-                <div class="line-foot"></div>
-                <div class="links-foot">
-                    <a href="{% url 'symptoms' %}">Symptoms</a>
-                    <a href="{% url 'prevention' %}">Preventive Measures</a>
-                    <a href="{% url 'faq' %}">FAQ</a>
-                    <a href="{% url 'about-us' %}">Know our team</a>
-                </div>
+    <!-- footer Starts here -->
+    <footer class="footer mt-5">
+        <div class="info-foot">
+            <div class="name">
+                <img src="/static/images/coronavirus(1).png" alt="" id="logo1" class="rotate">
+                <h3>&nbsp;CovidTracker<div class="small">Teslacoil</div>
+                </h3>
             </div>
-            <div class="name-foot">
-                <p>tesacoil-covid19.herokuapp.com 2020 All Rights Reserved.</p>
+            <div class="line-foot"></div>
+            <div class="links-foot">
+                <a href="/symptoms/">Symptoms</a>
+                <a href="/prevention/">Preventive Measures</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/about-us/">Know our team</a>
             </div>
-        </footer>
-        <!-- Footer ends here -->
-
-        <!-- Our team button starts-->
-        <div class="our-team-btn">
-            <a href="{% url 'about-us' %}" title="Know our team" class="team-btn"><i class="fas fa-users"></i></a>
         </div>
-        <!-- Our team button ends -->
+        <div class="name-foot">
+            <p>tesacoil-covid19.herokuapp.com 2020 All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
 
-        <!-- Chatbot -->
-        <script>
-            (function () {
-                var js,
-                    fs,
-                    d = document,
-                    id = "tars-widget-script",
-                    b = "https://tars-file-upload.s3.amazonaws.com/bulb/";
-                if (!d.getElementById(id)) {
-                    js = d.createElement("script");
-                    js.id = id;
-                    js.type = "text/javascript";
-                    js.src = b + "js/widget.js";
-                    fs = d.getElementsByTagName("script")[0];
-                    fs.parentNode.insertBefore(js, fs);
-                }
-            })();
-            window.tarsSettings = {
-                convid: "NywAZT",
-            };
-        </script>
-        <!-- Chatbot -->
+    <!-- Our team button starts-->
+    <div class="our-team-btn">
+        <a href="/about-us/" title="Know our team" class="team-btn"><i class="fas fa-users"></i></a>
+    </div>
+    <!-- Our team button ends -->
 
-        <script src="{% static 'js/nav.js' %}"></script>
+    <!-- Chatbot -->
+    <script>
+        (function () {
+            var js,
+                fs,
+                d = document,
+                id = "tars-widget-script",
+                b = "https://tars-file-upload.s3.amazonaws.com/bulb/";
+            if (!d.getElementById(id)) {
+                js = d.createElement("script");
+                js.id = id;
+                js.type = "text/javascript";
+                js.src = b + "js/widget.js";
+                fs = d.getElementsByTagName("script")[0];
+                fs.parentNode.insertBefore(js, fs);
+            }
+        })();
+        window.tarsSettings = {
+            convid: "NywAZT",
+        };
+    </script>
+    <!-- Chatbot -->
+
+    <script src="/static/js/nav.js"></script>
 </body>
 
 </html>

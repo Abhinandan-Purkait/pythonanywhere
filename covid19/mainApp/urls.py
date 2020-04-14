@@ -11,5 +11,6 @@ urlpatterns = [
     path('maps-stats/', views.map_stats, name='map-stats'),
     path('prediction/', views.prediction, name='prediction'),
     path('about-us/', views.about, name='about-us'),
-    path('vitualMedicalKit/', views.vitualMedicalKit, name='mkit'),
+    path('virtualMedicalKit/', views.vitualMedicalKit, name='mkit'),
+    path('indiaAnalysis/', views.indiaAnalysis, name='indiaAnalysis'),
 ]

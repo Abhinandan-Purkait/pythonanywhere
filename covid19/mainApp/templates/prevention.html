@@ -25,33 +25,53 @@
 
 <body>
     <!-- Navbar starts here -->
-    <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+    <head>
+    
+</head>
 
-        <div class="nav">
-            <a href="/">
-                <img src="/static/images/WHITEDRONE.png" alt="" id="logo1">
-            </a>
+<nav class="navbar navbar-expand-md navbar-dark sticky-top navbar-custom">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">
+        <img src="/static/images/coronavirus(1).png" alt="" id="logo1" class="rotate">
+        <h4>CovidTracker<div class="small">Teslacoil</div> </h4>
+    </a>
 
-            <ul class="nav-links">
-                <li class="nav-item"><a href="/statistics/">Statistics</a></li>
-                <li class="nav-item"><a href="/symptoms/">Symptoms</a></li>
-                <li class="nav-item active-link"><a href="/prevention/">Preventive Measures</a></li>
-                <li class="nav-item"><a href="/maps-stats/">Map Stats</a></li>
-                <li class="nav-item"><a href="/prediction/">Prediction</a></li>
-                <li class="nav-item"><a href="/faq/">FAQ</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/statistics/">Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/symptoms/">Symptoms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/prevention/">Prevention</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/prediction/">Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/maps-stats/">Map Stats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mkit'%}">Virtual Medical Kit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/indiaAnalysis/">Indian Analysis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/faq/">FAQ</a>
+            </li>
+        </ul>
+    </div>
+</nav>
     <!-- Navbar ends here -->
-
-    <!-- Preventive Measures starts here -->
-
-    <!-- Preventive Measures ends here -->
 
     <div class="container mt-5">
         <h3>Prevention is better than cure.</h3>
@@ -101,7 +121,9 @@
     <footer class="footer mt-5">
         <div class="info-foot">
             <div class="name">
-                <h3>CovidTracker</h3>
+                <img src="/static/images/coronavirus(1).png" alt="" id="logo1" class="rotate">
+                <h3>&nbsp;CovidTracker<div class="small">Teslacoil</div>
+                </h3>
             </div>
             <div class="line-foot"></div>
             <div class="links-foot">
